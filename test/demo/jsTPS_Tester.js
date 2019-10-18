@@ -1,4 +1,3 @@
-import jsTPS from '../../src/jstps/jsTPS'
 
 
 /**
