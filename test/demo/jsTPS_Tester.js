@@ -1,5 +1,6 @@
 import jsTPS from '../../src/jstps/jsTPS'
 
+
 /**
  * This driver demonstrates simple usage of the jTPS API.
  * 
@@ -24,6 +25,9 @@ class jsTPS_Tester {
      * 
      * @param args Not used in this demo.
      */
+
+
+    
     // public static void main(String[] args) {
     //     // LOOP FLAG VARIABLE
     //     boolean keepGoing = true;
@@ -81,4 +85,10 @@ class jsTPS_Tester {
     //     }
     //     System.out.println("GOODBYE");
     // }
+
+
+    main (id) {
+        console.log(id);
+        
+    }
 }
