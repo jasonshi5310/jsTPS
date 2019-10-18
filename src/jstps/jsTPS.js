@@ -9,7 +9,7 @@
  * @author THE McKilla Gorilla (accept no imposters)
  * @version 2.0
  */
-class jTPS {
+class jsTPS {
     // THE TRANSACTION STACK
     // private ArrayList<jTPS_Transaction> transactions = new ArrayList();
     
@@ -222,3 +222,5 @@ class jTPS {
         return text;
     }
 }
+
+export default jsTPS
