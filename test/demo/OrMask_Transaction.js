@@ -1,3 +1,4 @@
+import NUm from '../demo/Num';
 
 
 /**

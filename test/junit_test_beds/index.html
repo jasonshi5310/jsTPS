@@ -4,14 +4,29 @@
 <head>
     <title> jsTPS Unit Test Page</title>
     <meta charset="utf-8"/>
-    <script type="text/javascript" src="./jsTPS_Unit_Tests.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./jsTPS_Unit_Tests.js"></script>
+    <script src="../demo/Num.js"></script>
+    <script src="../../src/jstps/jsTPS.js"></script>
+    <script type="text/javascript">
+        $(document).ready( function() {
+            window.test = new jsTPS_Unit_Tests();
+            window.test.main("test results");
+        });
+    </script>
+    <!-- <script>window.onload = function () {
+        window.test = new jsTPS_Unit_Tests();
+        window.test.test();
+        }</script> -->
 
 </head>
 
 <body>
 
-    <h5 id = "test result">jsTPS Unit Test result:</h5>
-    <script language="javascript"> main("test result");</script>
+    <h1 id = "test results" style="text-align: center">jsTPS Unit Test result:</h1>
 </body>
 
 </html>
