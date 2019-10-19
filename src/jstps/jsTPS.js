@@ -66,7 +66,7 @@ class jsTPS {
         if ((this.mostRecentTransaction < 0)|| (this.mostRecentTransaction < (this.transactions.length-1))) {
             var i;
             for (i = this.transactions.length-1; i > this.mostRecentTransaction; i--) {
-                this.transactions.remove(i);
+                this.transactions.pop(i);
             }
         }
 
