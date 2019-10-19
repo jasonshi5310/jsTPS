@@ -269,7 +269,7 @@ class jsTPS_Unit_Tests {
         let tps = new jsTPS();
         let num = new Num();
         let testAdd = document.createElement("div");
-        testAdd.innerHTML = "test Undo";
+        testAdd.innerHTML = "test Undo:";
         result.appendChild(testAdd);
         let caseNum = 1;
         result.appendChild(this.assertEquals(num.getNum(), 0,caseNum++));

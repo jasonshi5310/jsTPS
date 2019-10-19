@@ -132,6 +132,8 @@ class jsTPS {
             var transaction = this.transactions[this.mostRecentTransaction];
             transaction.undoTransaction();
             this.mostRecentTransaction--;
+            if (this.mostRecentTransaction<0)
+            this.mostRecentTransaction=-1;
             this.performingUndo = false;
         }
     }

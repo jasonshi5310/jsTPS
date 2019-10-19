@@ -86,8 +86,55 @@ class jsTPS_Tester {
     // }
 
 
-    main (id) {
-        console.log(id);
-        
+    addBtnListener() {
+        let btn = document.getElementById("tester_button");
+        btn.addEventListener("click", this.main);
+    }
+
+    main () {
+        //console.log(id);
+        let result = document.getElementById("tester");
+        let input = document.getElementById("tester_input");
+        let decision = input.value;
+        console.log(decision);
+        let output = document.createElement('div');
+        switch(decision) {
+            case "1":
+            case "Add a Transaction":
+            case "add":
+            case "Add":
+                output.innerHTML = "Add a Transaction";
+                break;
+            case "2":
+            case "Undo a Transaction":
+            case "undo":
+            case "Undo":
+                output.innerHTML = "Undo a Transaction";
+                break;
+            case "3":
+            case "Redo a Transaction":
+            case "redo":
+            case "Redo":
+                output.innerHTML = "Redo a Transaction";
+                break;
+            case "4":
+            case "Clear All Transactions":
+            case "clear":
+            case "Clear":
+                output.innerHTML = "Clear All Transactions";
+                break;
+            case "5":
+            case "Reset Num and Transactions":
+            case "reset":
+            case "Reset":
+                output.innerHTML = "Reset Num and Transactions";
+                break;
+            default:
+                output.innerHTML = "Wrong Choice!";
+        }
+        result.appendChild(output);
+        result.appendChild(document.createElement("br"));
+        input.innerHTML = "";  
+        console.log("tester");      
     }
 }

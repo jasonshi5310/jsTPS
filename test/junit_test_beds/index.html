@@ -17,14 +17,18 @@
             window.test = new jsTPS_Unit_Tests();
             window.test.main("test_results");
             window.tester = new jsTPS_Tester();
-            window.tester.main("tester");
+            window.tester.addBtnListener();
         });
     </script>
-    <!-- <script>window.onload = function () {
-        window.test = new jsTPS_Unit_Tests();
-        window.test.test();
-        }</script> -->
-
+    <!-- <script>        
+        $(document).ready( function() {   
+            window.tester = new jsTPS_Tester();
+            let button = document.getElementById("tester_button");
+            button.addEventListener('click', jsTPS_Tester.main);
+            console.log("button");
+            //window.tester.main("tester", "tester_input");
+        });
+    </script> -->
 </head>
 
 <body>
@@ -39,7 +43,8 @@
             4) Clear All Transactions<br/>
             5) Reset Num and Transactions<br/></h3>
         <input id= "tester_input" type="text"/>
-        <button id="tester_button">Enter</button>
+        <button id="tester_button">
+            Enter</button>
     </div>
 </body>
 
