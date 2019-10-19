@@ -85,56 +85,102 @@ class jsTPS_Tester {
     //     System.out.println("GOODBYE");
     // }
 
-
     addBtnListener() {
         let btn = document.getElementById("tester_button");
-        btn.addEventListener("click", this.main);
+        btn.addEventListener("click", this.add);
+        let btn1 = document.getElementById("1", this.func1);
+        btn1.addEventListener("click", this.func1);
+        let btn2 = document.getElementById("2");
+        btn2.addEventListener("click", this.func2);
+        let btn3 = document.getElementById("3");
+        btn3.addEventListener("click", this.func3);
+        let btn4 = document.getElementById("4");
+        btn4.addEventListener("click", this.func4);
+        let btn5 = document.getElementById("5");
+        btn5.addEventListener("click", this.func5);
+    }
+    
+    // add
+    func1 = () => {
+        let btn = document.getElementById("tester_button");
+        let input = document.getElementById("tester_input");
+        input.disabled = false;
+        btn.disabled = false;
     }
 
-    main () {
-        //console.log(id);
-        let result = document.getElementById("tester");
+    add = () => {
+        let btn = document.getElementById("tester_button");
         let input = document.getElementById("tester_input");
-        let decision = input.value;
-        console.log(decision);
-        let output = document.createElement('div');
-        switch(decision) {
-            case "1":
-            case "Add a Transaction":
-            case "add":
-            case "Add":
-                output.innerHTML = "Add a Transaction";
-                break;
-            case "2":
-            case "Undo a Transaction":
-            case "undo":
-            case "Undo":
-                output.innerHTML = "Undo a Transaction";
-                break;
-            case "3":
-            case "Redo a Transaction":
-            case "redo":
-            case "Redo":
-                output.innerHTML = "Redo a Transaction";
-                break;
-            case "4":
-            case "Clear All Transactions":
-            case "clear":
-            case "Clear":
-                output.innerHTML = "Clear All Transactions";
-                break;
-            case "5":
-            case "Reset Num and Transactions":
-            case "reset":
-            case "Reset":
-                output.innerHTML = "Reset Num and Transactions";
-                break;
-            default:
-                output.innerHTML = "Wrong Choice!";
-        }
-        result.appendChild(output);
-        result.appendChild(document.createElement("br"));
-        input.innerHTML = "";  
-        console.log("tester");      
+        input.disabled = true;
+        btn.disabled = true;
+        input.value = "";
     }
+
+    func2 = () => {
+
+        let btn = document.getElementById("tester_button");
+        let input = document.getElementById("tester_input");
+        let result = document.getElementById("tester");
+        input.disabled = true;
+        btn.disabled = true;
+    }
+
+    func3 = () => {
+        let btn = document.getElementById("tester_button");
+        let input = document.getElementById("tester_input");
+        let result = document.getElementById("tester");
+        input.disabled = true;
+        btn.disabled = true;
+    }
+    
+    func4 = () => {
+        let btn = document.getElementById("tester_button");
+        let input = document.getElementById("tester_input");
+        let result = document.getElementById("tester");
+        input.disabled = true;
+        btn.disabled = true;
+
+    }
+
+    func5 = () => {
+        let btn = document.getElementById("tester_button");
+        let input = document.getElementById("tester_input");
+        let result = document.getElementById("tester");
+        input.disabled = true;
+        btn.disabled = true;
+
+    }
+
+
+
+    // main () {
+    //     //console.log(id);
+    //     let result = document.getElementById("tester");
+    //     let input = document.getElementById("tester_input");
+    //     // console.log(decision);
+    //     // let output = document.createElement('div');
+    //     // switch(decision) {
+    //     //     case "1":
+    //     //         output.innerHTML = "Add a Transaction";
+    //     //         break;
+    //     //     case "2":
+    //     //         output.innerHTML = "Undo a Transaction";
+    //     //         break;
+    //     //     case "3":
+    //     //         output.innerHTML = "Redo a Transaction";
+    //     //         break;
+    //     //     case "4":
+    //     //         output.innerHTML = "Clear All Transactions";
+    //     //         break;
+    //     //     case "5":
+    //     //         output.innerHTML = "Reset Num and Transactions";
+    //     //         break;
+    //     //     default:
+    //     //         output.innerHTML = "Wrong Choice!";
+    //     // }
+    //     // result.appendChild(output);
+    //     // result.appendChild(document.createElement("br"));
+    //     // input.innerHTML = "";  
+    //     // console.log("tester");      
+    // }
 }

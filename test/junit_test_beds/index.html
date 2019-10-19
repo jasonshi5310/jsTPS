@@ -20,15 +20,6 @@
             window.tester.addBtnListener();
         });
     </script>
-    <!-- <script>        
-        $(document).ready( function() {   
-            window.tester = new jsTPS_Tester();
-            let button = document.getElementById("tester_button");
-            button.addEventListener('click', jsTPS_Tester.main);
-            console.log("button");
-            //window.tester.main("tester", "tester_input");
-        });
-    </script> -->
 </head>
 
 <body>
@@ -42,9 +33,14 @@
             3) Redo a Transaction<br/>
             4) Clear All Transactions<br/>
             5) Reset Num and Transactions<br/></h3>
-        <input id= "tester_input" type="text"/>
-        <button id="tester_button">
-            Enter</button>
+        <button id="1">1</button>
+        <button id="2">2</button>
+        <button id="3">3</button>
+        <button id="4">4</button>
+        <button id="5">5</button>
+        <input id= "tester_input" type="text" disabled/>
+        <button id="tester_button" disabled>
+            Enter the Amount to Add</button>
     </div>
 </body>
 
