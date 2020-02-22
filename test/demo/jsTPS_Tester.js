@@ -85,12 +85,6 @@ class jsTPS_Tester {
     //     System.out.println("GOODBYE");
     // }
 
-    constructor()
-    {
-        this.tps = new jsTPS();
-        this.num = new Num();
-    }
-
     addBtnListener() {
         let btn = document.getElementById("tester_button");
         btn.addEventListener("click", this.add);
@@ -117,38 +111,18 @@ class jsTPS_Tester {
     add = () => {
         let btn = document.getElementById("tester_button");
         let input = document.getElementById("tester_input");
-        let amount = Number(input.value);
-        let result = document.getElementById("tester");
-        let output = document.createElement("div");
-        if (!Number.isInteger(amount))
-        {
-            output.innerHTML = "Tnvalid input!";
-        }
-        else {
-            let addTrans = new AddToNum_Transaction(this.num, amount);
-            this.tps.addTransaction(addTrans);
-            output.innerHTML = amount+" added! Now we have "+this.num.num;
-        }
-        result.appendChild(output);
         input.disabled = true;
         btn.disabled = true;
         input.value = "";
     }
 
     func2 = () => {
+
         let btn = document.getElementById("tester_button");
         let input = document.getElementById("tester_input");
         let result = document.getElementById("tester");
         input.disabled = true;
         btn.disabled = true;
-        let output = document.createElement("div");
-        if (this.tps.mostRecentTransaction!==-1){
-            this.tps.undoTransaction();
-            output.innerHTML = "Transaction undone! Now we have "+this.num.num;
-        }
-        else
-           output.innerHTML = "Can't undone anymore!";
-        result.appendChild(output);
     }
 
     func3 = () => {
@@ -157,12 +131,6 @@ class jsTPS_Tester {
         let result = document.getElementById("tester");
         input.disabled = true;
         btn.disabled = true;
-        let output = document.createElement("div");
-        if (this.tps.mostRecentTransaction<this.tps.transactions.length-1){
-        this.tps.doTransaction();
-        output.innerHTML = "Transaction redone! Now we have "+this.num.num;}
-        else output.innerHTML = "Can't redone anymore!";
-        result.appendChild(output);
     }
     
     func4 = () => {
@@ -171,10 +139,6 @@ class jsTPS_Tester {
         let result = document.getElementById("tester");
         input.disabled = true;
         btn.disabled = true;
-        this.tps.clearAllTransactions();
-        let output = document.createElement("div");
-        output.innerHTML = "All Transacions cleared! Now we have "+ this.num.num;
-        result.appendChild(output);
 
     }
 
@@ -184,11 +148,6 @@ class jsTPS_Tester {
         let result = document.getElementById("tester");
         input.disabled = true;
         btn.disabled = true;
-        this.tps.clearAllTransactions();
-        this.num.num = 0;
-        let output = document.createElement("div");
-        output.innerHTML = "Num and transaction reset! Now we have 0!";
-        result.appendChild(output);
 
     }
 
